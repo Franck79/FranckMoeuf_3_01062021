@@ -1,3 +1,5 @@
+/* Bloc Chargement du retour page d'accueil */
+/* Le bloc est affiché à peine 2 secondes au chargement de la page */
 .loader {
   position: fixed;
   height: 100%;
@@ -12,7 +14,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-
+/* Items billes de couleurs */
   &__item {
     height: 1rem;
     width: 1rem;
@@ -43,6 +45,8 @@
 
   
 }
+
+/* Section localisation */
 .local {
     display: flex;
     justify-content: center;
@@ -60,6 +64,7 @@
     }
   }
   
+  /* Section Présentation */
   .present {
     padding: 2rem;
     text-align: center;
@@ -79,6 +84,7 @@
     }
   }
   
+/* Section Fonctionnement du site  */
   .tuto {
     padding: ( $appPadding + 1rem ) $appPadding;
   
@@ -91,7 +97,8 @@
       padding: 0;
       list-style: none;
       counter-reset: compteListe;
-  
+
+      /* Afficahge flexbox en résolution 1024px */
       @media (min-width:64rem) {
         display: flex;
       }
@@ -105,25 +112,26 @@
       background-color: #f6f6f6;
       display: flex;
       position: relative;
-  
+      
+      /* Affichage en résolution 1024px */
       @media (min-width:64rem) {
         flex: 1;
         margin: 0;
         margin-left: 2rem;
-  
+        
         &:first-child {
           margin-left: 0.75rem;
         }
       }
-  
+      /* Pas de marge en haut pour le premier enfant de la liste ol*/
       &:first-child {
         margin-top: 0;
       }
-  
+      /* Pas de marge en bas pour le dernier enfant de la liste ol */
       &:last-child {
         margin-bottom: 0;
       }
-  
+      /* Affichage liste a puces numérique avec incrémentation du compteur */
       &::before {
         counter-increment: compteListe 1;
         content: counter(compteListe) " ";
@@ -146,15 +154,13 @@
     }
   }
   
+  /* Section Carte des Restaurants */
   .restaurants {
     background-color: #f6f6f6;
     padding: ($appPadding + 1rem) $appPadding;
-  
-    &__title {
-  
-    }
   }
   
+  /* Bloc des cartes des restaurants */
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -166,6 +172,7 @@
     }
   }
   
+  /* Bloc d'une carte d'un restaurant */
   .card {
     background-color: white;
     border-radius: 1rem;
@@ -225,6 +232,6 @@
     }
   
     &__like {
-      background-color: white!important;
+      background-color: white;
     }
   }

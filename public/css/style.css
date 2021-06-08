@@ -1,23 +1,30 @@
+@charset "UTF-8";
+/* Variables des codes couleur demandés  */
 @font-face {
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   src: url("/public/fonts/shrikhand/Shrikhand-Regular.otf") format("otf");
 }
 @font-face {
-  font-family: Roboto;
+  font-family: "Roboto";
   src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("ttf");
 }
+/* Font et marge pour le body de toutes les pages */
+/* Gestion du scrolling en mode doux */
 body, html {
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
 
+/* Mixin pour les boutons du site */
+/* Positions et tailles des blocs container pour chaque section */
 .container {
   max-width: 1280px;
   margin: auto;
   position: relative;
 }
 
+/* HEADER */
 .header {
   padding: 1rem 1rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -25,11 +32,12 @@ body, html {
   z-index: 1000;
 }
 .header__logo {
-  font-family: "Shrikhand", "cursive";
+  font-family: "Shrikhand", bold;
   margin: 0;
   text-align: center;
 }
 
+/* FOOTER */
 .footer {
   background-color: #353535;
 }
@@ -71,20 +79,8 @@ body, html {
   margin-right: 0.5rem;
 }
 
-.present__btn {
-  border: 0;
-  padding: 0.75rem 1.5rem;
-  font-weight: 500;
-  font-size: 1.1rem;
-  border-radius: 100px;
-  color: #fff;
-  background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  cursor: pointer;
-  transition-duration: 0.25s;
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
-}
-
+/* Bloc Chargement du retour page d'accueil */
+/* Le bloc est affiché à peine 2 secondes au chargement de la page */
 .loader {
   position: fixed;
   height: 100%;
@@ -99,6 +95,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Items billes de couleurs */
 }
 .loader__item {
   height: 1rem;
@@ -124,6 +121,7 @@ body, html {
   animation-delay: 0.5s;
 }
 
+/* Section localisation */
 .local {
   display: flex;
   justify-content: center;
@@ -139,6 +137,7 @@ body, html {
   font-weight: 700;
 }
 
+/* Section Présentation */
 .present {
   padding: 2rem;
   text-align: center;
@@ -173,6 +172,7 @@ body, html {
   color: inherit;
 }
 
+/* Section Fonctionnement du site  */
 .tuto {
   padding: 2rem 1rem;
 }
@@ -184,6 +184,7 @@ body, html {
   padding: 0;
   list-style: none;
   counter-reset: compteListe;
+  /* Afficahge flexbox en résolution 1024px */
 }
 @media (min-width: 64rem) {
   .tuto__steps {
@@ -198,6 +199,10 @@ body, html {
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+  /* Affichage en résolution 1024px */
+  /* Pas de marge en haut pour le premier enfant de la liste ol*/
+  /* Pas de marge en bas pour le dernier enfant de la liste ol */
+  /* Affichage liste a puces numérique avec incrémentation du compteur */
 }
 @media (min-width: 64rem) {
   .tuto__step {
@@ -234,10 +239,13 @@ body, html {
   color: #7e7e7e;
 }
 
+/* Section Carte des Restaurants */
 .restaurants {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
 }
+
+/* Bloc des cartes des restaurants */
 .cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -250,6 +258,7 @@ body, html {
   }
 }
 
+/* Bloc d'une carte d'un restaurant */
 .card {
   background-color: white;
   border-radius: 1rem;
@@ -302,9 +311,11 @@ body, html {
   justify-content: center;
 }
 .card__like {
-  background-color: white !important;
+  background-color: white;
 }
 
+/* Appel fonction sass pour les calculs */
+/* HEADER et bouton retour Page d'accueil*/
 .header--withBackArrow {
   position: relative;
 }
@@ -389,8 +400,10 @@ body, html {
   opacity: 0;
 }
 
+/* Section du menu */
 .submenus {
   display: grid;
+  /*  Affichage en résolution 1024px sur 3 colonnes */
 }
 @media (min-width: 64rem) {
   .submenus {
@@ -399,6 +412,7 @@ body, html {
   }
 }
 
+/* Sections des sous-menus Entrées, Plats et Desserts */
 .submenu {
   max-width: 100%;
   overflow: hidden;
@@ -420,6 +434,9 @@ body, html {
   bottom: 0;
 }
 
+/* Blocs des items dans un menu */
+/* Avec animation css qui fait apparaitre les sections */
+/* les unes à la suite des autres */
 .menuItem {
   background-color: white;
   padding: 1rem;
@@ -434,6 +451,8 @@ body, html {
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
+  /* On cache le bloc confirmation avec des marges négatives */
+  /* le bloc confirmation apparait de la droite en cliquant */
 }
 .menuItem__header {
   white-space: nowrap;
@@ -490,6 +509,8 @@ body, html {
   color: #99E2D0;
 }
 
+/* Boucle afin de faire apparaitre chaque section */
+/* Avec un delai d'affichage spécifique pour chaque section */
 .delay-0 {
   animation-delay: 0s;
 }
@@ -556,6 +577,7 @@ body, html {
   color: inherit;
 }
 
+/* Animation pour afficher les sections menu */
 @keyframes itemAppear {
   0% {
     transform: scale(0);
@@ -564,12 +586,15 @@ body, html {
     transform: scale(1);
   }
 }
+/* Animation du bloc chargement retour page d'accueil */
+/* Affichage transparent */
 @keyframes loader {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
+/* Animation des billes de couleurs du bloc chargement */
 @keyframes jump {
   0% {
     transform: translateY(0);

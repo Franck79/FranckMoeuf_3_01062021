@@ -1,6 +1,7 @@
-
+/* Appel fonction sass pour les calculs */
 @use "sass:math";
 
+/* HEADER et bouton retour Page d'accueil*/
 .header {
     &--withBackArrow {
       position: relative;
@@ -99,15 +100,17 @@
     }
   }
   
+  /* Section du menu */
   .submenus {
     display: grid;
-  
+    /*  Affichage en résolution 1024px sur 3 colonnes */
     @media (min-width:64rem) {
       grid-template-columns: repeat(3,1fr);
       column-gap: 1rem;
     }
   }
   
+  /* Sections des sous-menus Entrées, Plats et Desserts */
   .submenu {
     max-width: 100%;
     overflow: hidden;
@@ -131,6 +134,9 @@
     }
   }
   
+  /* Blocs des items dans un menu */
+  /* Avec animation css qui fait apparaitre les sections */
+  /* les unes à la suite des autres */
   .menuItem {
     background-color: white;
     padding: 1rem;
@@ -174,7 +180,7 @@
       align-items: flex-end;
       padding-left: 0.5rem;
     }
-  
+    /* On cache le bloc confirmation avec des marges négatives */
     &__confirmation {
       background-color: $color-tertiary;
       margin: -1rem -5rem -1rem 1rem;
@@ -184,7 +190,7 @@
       justify-content:center;
       transition-duration: 0.5s;
     }
-  
+    /* le bloc confirmation apparait de la droite en cliquant */
    &:hover &__confirmation {
       margin-right: -1rem;
     }
@@ -211,6 +217,8 @@
     }
   }
   
+  /* Boucle afin de faire apparaitre chaque section */
+  /* Avec un delai d'affichage spécifique pour chaque section */
   @for $i from 0 to 9 {
     .delay-#{$i} {
       animation-delay:  #{math.div($i, 10)}s;
