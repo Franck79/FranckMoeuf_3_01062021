@@ -219,6 +219,7 @@
   
   /* Boucle afin de faire apparaitre chaque section */
   /* Avec un delai d'affichage spécifique pour chaque section */
+  /* pour qu'il apparaisse successivement */
   @for $i from 0 to 9 {
     .delay-#{$i} {
       animation-delay:  #{math.div($i, 10)}s;

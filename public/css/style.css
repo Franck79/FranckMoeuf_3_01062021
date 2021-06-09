@@ -511,6 +511,7 @@ body, html {
 
 /* Boucle afin de faire apparaitre chaque section */
 /* Avec un delai d'affichage spécifique pour chaque section */
+/* pour qu'il apparaisse successivement */
 .delay-0 {
   animation-delay: 0s;
 }
