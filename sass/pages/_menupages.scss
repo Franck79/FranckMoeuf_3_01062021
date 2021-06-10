@@ -79,7 +79,7 @@
   
     &__like {
       transition-duration: .25s;
-      background-color: #f6f6f6;
+      background-color:white;
       position: absolute;
       top: 0;
       left: 0;
@@ -171,6 +171,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+      font-family: "Roboto", thin;
     }
   
     &__price {
@@ -222,7 +223,7 @@
   /* pour qu'il apparaisse successivement */
   @for $i from 0 to 9 {
     .delay-#{$i} {
-      animation-delay:  #{math.div($i, 15)}s;
+      animation-delay:  #{math.div($i, 5)}s;
     }
   }
   
