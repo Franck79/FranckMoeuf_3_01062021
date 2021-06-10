@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("opentype");
+  src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
 }
 /* Font et marge pour le body de toutes les pages */
 /* Gestion du scrolling en mode doux */
@@ -517,35 +517,35 @@ body, html {
 }
 
 .delay-1 {
-  animation-delay: 0.1s;
+  animation-delay: 0.0666666667s;
 }
 
 .delay-2 {
-  animation-delay: 0.2s;
+  animation-delay: 0.1333333333s;
 }
 
 .delay-3 {
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
 }
 
 .delay-4 {
-  animation-delay: 0.4s;
+  animation-delay: 0.2666666667s;
 }
 
 .delay-5 {
-  animation-delay: 0.5s;
+  animation-delay: 0.3333333333s;
 }
 
 .delay-6 {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 
 .delay-7 {
-  animation-delay: 0.7s;
+  animation-delay: 0.4666666667s;
 }
 
 .delay-8 {
-  animation-delay: 0.8s;
+  animation-delay: 0.5333333333s;
 }
 
 .wrapBtn {
@@ -581,10 +581,11 @@ body, html {
 /* Animation pour afficher les sections menu */
 @keyframes itemAppear {
   0% {
-    transform: scale(0);
+    transform: translateY(30px);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 /* Animation du bloc chargement retour page d'accueil */

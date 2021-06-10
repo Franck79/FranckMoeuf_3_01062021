@@ -222,7 +222,7 @@
   /* pour qu'il apparaisse successivement */
   @for $i from 0 to 9 {
     .delay-#{$i} {
-      animation-delay:  #{math.div($i, 10)}s;
+      animation-delay:  #{math.div($i, 15)}s;
     }
   }
   
