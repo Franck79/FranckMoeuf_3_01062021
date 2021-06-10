@@ -7,25 +7,25 @@ $appPadding: 1rem;
 
 @font-face {
     font-family: "Shrikhand";
-    src: url("/public/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
+    src: url("public/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
    }
 
 @font-face {
     font-family: "Roboto-regular";
-    src: url("/public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
+    src: url("public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
     font-weight: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/public/fonts/roboto/Roboto-Thin.ttf") format("truetype");
+  src: url("public/fonts/roboto/Roboto-Thin.ttf") format("truetype");
   font-weight: Thin;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("/public/fonts/roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("public/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
