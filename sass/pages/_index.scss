@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     padding: 1.25rem $appPadding;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(237, 235, 235);
     font-size: 1.2rem;
     position: relative;
   
@@ -60,7 +60,7 @@
     }
   
     &__text {
-      font-weight: 700;
+      font-weight:400;
     }
   }
   
@@ -75,14 +75,15 @@
     }
   
     &__subtitle {
+      font-weight: 300;
       margin-top: 0.5rem;
       margin-bottom: 3rem;
-      font-family: "Roboto", thin;
     }
   
     &__btn {
       @include button(primary);
       margin-top: 1rem;
+      padding: 1rem 1.7rem;
     }
   }
   
@@ -236,7 +237,7 @@
   
     &__subtitle {
       margin: 0;
-      font-family: "Roboto", thin;
+      font-weight: 300;
     }
   
     &__btn {

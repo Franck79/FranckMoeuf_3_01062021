@@ -5,46 +5,21 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $appPadding: 1rem;
 
-@font-face {
-    font-family: "Shrikhand";
-    src: url("public/fonts/shrikhand/Shrikhand-Regular.otf") format("opentype");
-   }
 
-@font-face {
-    font-family: "Roboto-regular";
-    src: url("public/fonts/roboto/Roboto-Regular.ttf") format("truetype");
-    font-weight: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("public/fonts/roboto/Roboto-Thin.ttf") format("truetype");
-  font-weight: Thin;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("public/fonts/roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
 /* Font et marge pour le body de toutes les pages */
 /* Gestion du scrolling en mode doux */
 body, html {
     margin: 0;
-    font-family: "Roboto-regular", sans-serif;
+    font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
   }
 
-h1, h2, h3 {
-  font-family: "Roboto", bold;
-}
+
 
   /* Mixin pour les boutons du site */
   @mixin button($type) {
     border: 0;
-    padding: 1rem 2rem;
+    padding: 1rem 2.8rem;
     font-weight: 500;
     font-size: 16px;
     border-radius: 100px;
@@ -82,7 +57,7 @@ h1, h2, h3 {
     z-index: 1000;
   
     &__logo {
-      font-family: "Shrikhand", bold;
+      font-family: 'Shrikhand', cursive;
       margin: 0;
       text-align: center;
     }

@@ -120,7 +120,7 @@
       text-transform: uppercase;
       position: relative;
       padding-bottom: 0.5rem;
-      font-weight: normal;
+      font-weight: 300;
   
       &::after {
         content: "";
@@ -171,7 +171,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      font-family: "Roboto", thin;
+      font-weight: 300;
     }
   
     &__price {
