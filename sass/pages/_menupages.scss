@@ -6,7 +6,8 @@
     &--withBackArrow {
       position: relative;
     }
-  
+    
+    /* Icone du retour à l'accueil */
     &__arrow {
       position: absolute;
       left: 2rem;
@@ -22,6 +23,7 @@
     }
   }
   
+  /* Image de présentation d'une carte d'un restaurant */
   .presImg {
     max-width: 100%;
     max-height: 16rem;
@@ -29,24 +31,28 @@
     object-fit: cover;
   }
   
+  /* Conteneur de tout le menu */
   .menu {
     margin-top: -3rem;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
-  
+    
+    /* Header pour le titre du restaurant */
     &__header {
       padding: 1rem 2rem 0 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-  
+    
+    /* Font du titre du restaurant */
     &__title {
       font-family: "Shrikhand", "cursive";
     }
-  
+    
+    /* Icone Coeur pour le bouton like  */
     &__btn {
       height: 2rem;
       width: 2rem;
@@ -60,10 +66,13 @@
       position: relative;
       background-color: black;
       
+      /* Opacité au survol du bouton */
       &:hover::before {
         opacity: 1;
       }
       
+      /* Après le survol de la souris, plus d'opacité */
+      /* L'icone coeur est remplie avec un dégradé des 2 premières couleurs */
       &::before {
         opacity: 0;
         transition: 0.5s;
@@ -76,7 +85,8 @@
         background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
       }
     }
-  
+    
+    /* Affichage et animation de l'icone coeur */
     &__like {
       transition-duration: .25s;
       background-color:#f6f6f6;
@@ -90,7 +100,8 @@
       justify-content:center;
       mix-blend-mode: lighten;
     }
-  
+    
+    /* Affichage de l'icone coeur sans background-color et pas d'opacité */
     &__btn:hover {
       .menu__like {
         &--noBg {
@@ -115,13 +126,15 @@
     max-width: 100%;
     overflow: hidden;
     padding: 0 1rem;
-  
+    
+    /* Titres pour les 3 sections du menu */
     &__title {
       text-transform: uppercase;
       position: relative;
       padding-bottom: 0.5rem;
       font-weight: 300;
-  
+      
+      /* Affichage afin de sous ligner les titres */
       &::after {
         content: "";
         width: 3rem;
@@ -139,7 +152,7 @@
   /* les unes à la suite des autres */
   .menuItem {
     background-color: white;
-    padding: 1rem;
+    padding: 12px;
     display: flex;
     border-radius: 0.75rem;
     margin: 1rem 0;
@@ -151,36 +164,46 @@
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%;
-  
+    
+    /* Header contenant titres et descriptions */
     &__header {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       flex: 1;
     }
-  
+    
+    /* Titres des entrées, plats, desserts */
     &__title {
       margin: 0;
+      font-size: 17px;
+      font-weight: 400;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     }
-  
+    
+    /* Descriptions des entrées, plats et desserts */
     &__description {
       margin: 0;
+      margin-top: 5px;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       font-weight: 300;
+      font-size: 14px;
     }
-  
+    
+    /* Affichage des prix des entrées, plats et desserts */
     &__price {
-      font-weight: bold;
+      font-weight: 400;
+      font-size: 15px;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
       padding-left: 0.5rem;
     }
+
     /* On cache le bloc confirmation avec des marges négatives */
     &__confirmation {
       background-color: $color-tertiary;
@@ -191,11 +214,13 @@
       justify-content:center;
       transition-duration: 0.5s;
     }
+
     /* le bloc confirmation apparait de la droite en cliquant */
    &:hover &__confirmation {
       margin-right: -1rem;
     }
-  
+    
+    /* Affichage du bloc contenant l'Icone pour confirmer un choix */
     &__wrapIcon {
       height: 1.6rem;
       width: 1.6rem;
@@ -208,11 +233,13 @@
       transition-duration: 0.5s;
   
     }
-  
+    
+    /* Rotation pour afficher l'icone dans le bon sens */
     &:hover &__wrapIcon {
       transform: rotate(0);
     }
-  
+    
+    /* Couleur pour l'icone confirmation */
     &__icon {
       color: $color-tertiary;
     }
@@ -220,13 +247,14 @@
   
   /* Boucle afin de faire apparaitre chaque section */
   /* Avec un delai d'affichage spécifique pour chaque section */
-  /* pour qu'il apparaisse successivement */
+  /* pour qu'elles apparaissent successivement */
   @for $i from 0 to 9 {
     .delay-#{$i} {
       animation-delay:  #{math.div($i, 5)}s;
     }
   }
   
+  /* Affichage du bloc contenant le bouton commande */
   .wrapBtn {
     display: flex;
     text-decoration: none;
@@ -234,6 +262,7 @@
     padding: 3rem 0;
   }
   
+  /* Affichage du bouton Commander avec la mixin button */
   .commandBtn {
     @include button(primary);
     cursor: pointer;

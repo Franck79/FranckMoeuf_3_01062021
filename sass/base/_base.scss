@@ -55,7 +55,8 @@ body, html {
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
     position: relative;
     z-index: 1000;
-  
+    
+    /* Affichage logo */
     &__logo {
       font-family: 'Shrikhand', cursive;
       margin: 0;
@@ -67,12 +68,14 @@ body, html {
   .footer {
     background-color: #353535;
     
+    /* Bloc contenu du Footer */
     .container {
       display: flex;
       flex-direction: column;
       padding: $appPadding;
     }
     
+    /* Logo dans le footer */
     &__logo {
       color: white;
       font-family: "Shrikhand", "cursive";
@@ -80,34 +83,41 @@ body, html {
       font-size: 1.2rem;
       margin-bottom: $appPadding;
     }
-  
+    
+    /* Liste de liens dans le footer */
     &__list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-  
+    
+    /* Affichage d'une ligne <li */
     &__listElt {
       margin: 0.5rem 0;
-  
+      
+      /* marge en haut pour le premier item de la liste */
       &:first-child {
         margin-top: 0;
       }
-  
+      
+      /* Marge en bas pour le dernier item de la liste */
       &:last-child {
         margin-bottom: 0;
       }
     }
-  
+    
+    /* Affichage d'un lien dans la liste */
     &__link {
       color: white;
       text-decoration: none;
-  
+      
+      /* sous ligné le lien au survol */
       &:hover {
         text-decoration: underline;
       }
     }
-  
+    
+    /* Affichage Icones de la liste du footer */
     &__icon {
       width: 1.2rem;
       margin-right: 0.5rem;

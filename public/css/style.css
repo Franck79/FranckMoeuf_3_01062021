@@ -23,6 +23,7 @@ body, html {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   position: relative;
   z-index: 1000;
+  /* Affichage logo */
 }
 .header__logo {
   font-family: "Shrikhand", cursive;
@@ -33,6 +34,12 @@ body, html {
 /* FOOTER */
 .footer {
   background-color: #353535;
+  /* Bloc contenu du Footer */
+  /* Logo dans le footer */
+  /* Liste de liens dans le footer */
+  /* Affichage d'une ligne <li */
+  /* Affichage d'un lien dans la liste */
+  /* Affichage Icones de la liste du footer */
 }
 .footer .container {
   display: flex;
@@ -53,6 +60,8 @@ body, html {
 }
 .footer__listElt {
   margin: 0.5rem 0;
+  /* marge en haut pour le premier item de la liste */
+  /* Marge en bas pour le dernier item de la liste */
 }
 .footer__listElt:first-child {
   margin-top: 0;
@@ -63,6 +72,7 @@ body, html {
 .footer__link {
   color: white;
   text-decoration: none;
+  /* sous ligné le lien au survol */
 }
 .footer__link:hover {
   text-decoration: underline;
@@ -96,6 +106,10 @@ body, html {
   border-radius: 1rem;
   animation: jump 1s;
   animation-iteration-count: 1;
+  /* Conteneur des billes */
+  /* 1ère bille */
+  /* 2ème bille */
+  /* 3ème bille */
 }
 .loader__itemContainer {
   display: flex;
@@ -122,6 +136,8 @@ body, html {
   background-color: #edebeb;
   font-size: 1.2rem;
   position: relative;
+  /* Icone map */
+  /* Texte localisation */
 }
 .local__icon {
   margin-right: 1rem;
@@ -135,6 +151,9 @@ body, html {
   padding: 2rem 2rem 4.6rem 2rem;
   text-align: center;
   background-color: #f9f4f4;
+  /* Pas de marge pour le titre de la section présentation */
+  /* Sous-titre de la section présentation avec font thin */
+  /* Bouton Explorer nos restaurants */
 }
 .present__title {
   margin: 0;
@@ -171,6 +190,11 @@ body, html {
 /* Section Fonctionnement du site  */
 .tuto {
   padding: 2rem 1rem;
+  /* Titre section fonctionnement du site */
+  /* Initialisation des Items de la liste a puces */
+  /* Affichage pour chaque items <li> */
+  /* Icones pour le menu fonctionnement du site */
+  /* Icone 3 afin qu'elle apparaissent en violet */
 }
 .tuto__title {
   margin-top: 0;
@@ -195,6 +219,7 @@ body, html {
   background-color: #f6f6f6;
   display: flex;
   position: relative;
+  /* texte centrer dans les items <li> */
   /* Affichage en résolution 1024px */
   /* Pas de marge en haut pour le premier enfant de la liste ol*/
   /* Pas de marge en bas pour le dernier enfant de la liste ol */
@@ -208,6 +233,7 @@ body, html {
     flex: 1;
     margin: 0;
     margin-left: 2rem;
+    /* Marge à gauche pour le premier enfant de la liste a puce */
   }
   .tuto__step:first-child {
     margin-left: 0.75rem;
@@ -259,6 +285,7 @@ body, html {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 2rem;
   row-gap: 1.3rem;
+  /* Affichage du bloc sur 2 colonnes en 1024px */
 }
 @media (min-width: 64rem) {
   .cards {
@@ -275,9 +302,17 @@ body, html {
   text-decoration: none;
   color: inherit;
   display: block;
+  /* Photo d'un restaurant */
+  /* Flag Nouveau d'un restaurant */
+  /* Pied de page d'un restaurant */
+  /* Bloc titre et sous-titre d'une carte d'un restaurant */
+  /* Titre d'une carte d'un restaurant */
+  /* Sous-titre d'une carte d'un restaurant */
+  /* Bloc contenant l'icone pour le like */
+  /* Icone Heart pour le like */
 }
 .card__img {
-  height: 12rem;
+  height: 180px;
   width: 100%;
   border: transparent solid 0px;
   border-radius: 1rem 1rem 0 0;
@@ -286,8 +321,8 @@ body, html {
 }
 .card__badge {
   background-color: #99E2D0;
-  color: #1b6150;
-  padding: 0.5rem;
+  color: #30937a;
+  padding: 6px 15px;
   border-radius: 0.125rem;
   position: absolute;
   top: 1rem;
@@ -326,6 +361,9 @@ body, html {
 
 /* Appel fonction sass pour les calculs */
 /* HEADER et bouton retour Page d'accueil*/
+.header {
+  /* Icone du retour à l'accueil */
+}
 .header--withBackArrow {
   position: relative;
 }
@@ -343,6 +381,7 @@ body, html {
   color: black;
 }
 
+/* Image de présentation d'une carte d'un restaurant */
 .presImg {
   max-width: 100%;
   max-height: 16rem;
@@ -350,12 +389,18 @@ body, html {
   object-fit: cover;
 }
 
+/* Conteneur de tout le menu */
 .menu {
   margin-top: -3rem;
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
   z-index: 1;
   position: relative;
+  /* Header pour le titre du restaurant */
+  /* Font du titre du restaurant */
+  /* Icone Coeur pour le bouton like  */
+  /* Affichage et animation de l'icone coeur */
+  /* Affichage de l'icone coeur sans background-color et pas d'opacité */
 }
 .menu__header {
   padding: 1rem 2rem 0 1rem;
@@ -378,6 +423,9 @@ body, html {
   cursor: pointer;
   position: relative;
   background-color: black;
+  /* Opacité au survol du bouton */
+  /* Après le survol de la souris, plus d'opacité */
+  /* L'icone coeur est remplie avec un dégradé des 2 premières couleurs */
 }
 .menu__btn:hover::before {
   opacity: 1;
@@ -427,12 +475,14 @@ body, html {
   max-width: 100%;
   overflow: hidden;
   padding: 0 1rem;
+  /* Titres pour les 3 sections du menu */
 }
 .submenu__title {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: 300;
+  /* Affichage afin de sous ligner les titres */
 }
 .submenu__title::after {
   content: "";
@@ -449,7 +499,7 @@ body, html {
 /* les unes à la suite des autres */
 .menuItem {
   background-color: white;
-  padding: 1rem;
+  padding: 12px;
   display: flex;
   border-radius: 0.75rem;
   margin: 1rem 0;
@@ -461,8 +511,15 @@ body, html {
   animation-fill-mode: both;
   transform: scale(0);
   max-width: 100%;
+  /* Header contenant titres et descriptions */
+  /* Titres des entrées, plats, desserts */
+  /* Descriptions des entrées, plats et desserts */
+  /* Affichage des prix des entrées, plats et desserts */
   /* On cache le bloc confirmation avec des marges négatives */
   /* le bloc confirmation apparait de la droite en cliquant */
+  /* Affichage du bloc contenant l'Icone pour confirmer un choix */
+  /* Rotation pour afficher l'icone dans le bon sens */
+  /* Couleur pour l'icone confirmation */
 }
 .menuItem__header {
   white-space: nowrap;
@@ -472,19 +529,24 @@ body, html {
 }
 .menuItem__title {
   margin: 0;
+  font-size: 17px;
+  font-weight: 400;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menuItem__description {
   margin: 0;
+  margin-top: 5px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-weight: 300;
+  font-size: 14px;
 }
 .menuItem__price {
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 15px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -522,7 +584,7 @@ body, html {
 
 /* Boucle afin de faire apparaitre chaque section */
 /* Avec un delai d'affichage spécifique pour chaque section */
-/* pour qu'il apparaisse successivement */
+/* pour qu'elles apparaissent successivement */
 .delay-0 {
   animation-delay: 0s;
 }
@@ -559,6 +621,7 @@ body, html {
   animation-delay: 1.6s;
 }
 
+/* Affichage du bloc contenant le bouton commande */
 .wrapBtn {
   display: flex;
   text-decoration: none;
@@ -566,6 +629,7 @@ body, html {
   padding: 3rem 0;
 }
 
+/* Affichage du bouton Commander avec la mixin button */
 .commandBtn {
   border: 0;
   padding: 1rem 2.8rem;
